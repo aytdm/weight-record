@@ -7,12 +7,12 @@ Register your weight, you can see it visually.
 ## Preview
 
 <p>
-    <img valign="top" src="https://raw.githubusercontent.com/aytdm/weight-record/images/ss_total.png" width="150">
-    <img valign="top" src="https://raw.githubusercontent.com/aytdm/weight-record/images/ss_jan.png" width="150">
-    <img valign="top" src="https://raw.githubusercontent.com/aytdm/weight-record/images/ss_feb.png" width="150">
-    <img valign="top" src="https://raw.githubusercontent.com/aytdm/weight-record/images/ss_error.png" width="150">
+    <img valign="top" src="https://raw.githubusercontent.com/aytdm/weight-record/images/ss_total.png" width="200">
+    <img valign="top" src="https://raw.githubusercontent.com/aytdm/weight-record/images/ss_jan.png" width="200">
+    <img valign="top" src="https://raw.githubusercontent.com/aytdm/weight-record/images/ss_feb.png" width="200">
+    <img valign="top" src="https://raw.githubusercontent.com/aytdm/weight-record/images/ss_error.png" width="200">
 </p>
-<p><img valign="top" src="https://raw.githubusercontent.com/aytdm/weight-record/images/ss_register.png" width="150"></p>
+<p><img valign="top" src="https://raw.githubusercontent.com/aytdm/weight-record/images/ss_register.png" width="200"></p>
 
 ## Workflow
 
@@ -24,7 +24,7 @@ I used RDS MySQL.
 
 ## Entity-relationship diagram
 
-<img src="https://raw.githubusercontent.com/aytdm/weight-record/images/erd.png" width="150">
+<img src="https://raw.githubusercontent.com/aytdm/weight-record/images/erd.png">
 
 ## Example of Lambda Function (Nods.js)
 
