@@ -1,0 +1,11 @@
+image: node:latest
+
+job:
+  before_script:
+    - yarn install
+  stage: test
+  script: yarn run test
+
+cache:
+  paths:
+    - node_modules/

@@ -1,0 +1,46 @@
+{
+  "name": "track-weight",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "numa <aytdm251@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "ava --verbose",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "@nuxtjs/dotenv": "^1.1.0",
+    "axios": "^0.17.1",
+    "buefy": "^0.6.3",
+    "chart.js": "^2.7.1",
+    "moment": "^2.20.1",
+    "node-sass": "^4.7.2",
+    "nuxt": "^1.0.0",
+    "sass-loader": "^6.0.6",
+    "vue-chartjs": "^3.1.1"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "jsdom": "^11.6.2",
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}
