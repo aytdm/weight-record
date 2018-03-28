@@ -1,5 +1,15 @@
 [
     {
+        "date": "2018-02-27T00:00:00.000Z",
+        "weight": 90.3,
+        "category": "February"
+    },
+    {
+        "date": "2018-02-28T00:00:00.000Z",
+        "weight": 88.1,
+        "category": "February"
+    },
+    {
         "date": "2018-03-01T00:00:00.000Z",
         "weight": 87.5,
         "category": "March"
