@@ -18,9 +18,9 @@ Register your weight, you can see it visually.
 
 <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aytdm/20180209/20180209152837.png">
 
-If you want to use this, you need to prepare environment of AWS Lambda, Amazon API Gateway and Amazon RDS.
+If you want to use this, you need to prepare environment of AWS Lambda, Amazon API Gateway and Amazon RDS. (I used MySQL.)
 
-I used RDS MySQL.
+**However, Do not recommend this way in production. It is only for study.**
 
 ## Entity-relationship diagram
 
@@ -31,3 +31,17 @@ I used RDS MySQL.
 * [fetching data from MySQL](https://gist.github.com/aytdm/f73f329fb5e7d0537aac1180f3f4298b)
 * [insert data into MySQL](https://gist.github.com/aytdm/51eda9d98304c57f8c5f82d95344dd39)
 * [update data on MySQL](https://gist.github.com/aytdm/68f4845288ac6f9cbc0a0f1e628bb764)
+
+## How to see demo without preparing the environment
+
+``` bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+```
+
+Then, open `http://localhost:3000/example` in your browser and example will show up.
+
+note: It can not be registered or updated.
