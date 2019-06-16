@@ -1,5 +1,5 @@
 import Vue from 'vue'
 import Buefy from 'buefy'
-import 'buefy/lib/buefy.css'
+import 'buefy/dist/buefy.css'
 
 Vue.use(Buefy) 
