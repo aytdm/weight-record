@@ -2,25 +2,26 @@
   <section>
     <div class="container section">
       <div class="content">
-        <h1 class="title">Weight Loss Progress</h1>
-      </div>
-
-      <div class="content" v-if="loaded">
-        <div class="select is-info">
-          <select v-model="selectedCategory" @change="fetchData">
-            <option value="">Total</option>
-            <option
-              v-for="category in categories"
-              :value="category"
-              :key="category"
-            >
-              {{ category }}
-            </option>
-          </select>
+        <div>
+          <h1 class="title">Weight Loss Progress</h1>
         </div>
-        &nbsp;
-        <a class="button is-info is-outlined" @click="showModal=true">Register/Update</a>
-        <div class="modal is-active" v-show="showModal">
+
+        <div v-if="loaded">
+          <div class="select is-info">
+            <select v-model="selectedCategory" @change="fetchData">
+              <option value="">Total</option>
+              <option
+                v-for="category in categories"
+                :value="category"
+                :key="category"
+              >
+                {{ category }}
+              </option>
+            </select>
+          </div>
+          &nbsp;
+          <a class="button is-info is-outlined" @click="showModal=true">Register/Update</a>
+          <div class="modal is-active" v-show="showModal">
             <div class="modal-background" />
             <div class="modal-card">
               <header class="modal-card-head">
@@ -57,25 +58,23 @@
                 <button class="button is-success" @click="update">Register / Update</button>
                 <button class="button" @click="initialize">Cancel</button>
               </footer>
-          </div>
-        </div>
-      </div>
-
-      <div class="content">
-        <div v-if="loaded">
-          <article class="message is-success">
-            <div class="message-body" v-if="selectedCategory === ''">
-              <p v-if="0 < incrementalDifference">
-                You've lost <strong>{{ incrementalDifference }}</strong> kilos.
-              </p>
-              <p v-else-if="absoluteValue === 0">
-                Your weight have been stable since measuring.
-              </p>
-              <p v-else>
-                You've gained <strong>{{ absoluteValue }}</strong> kilos.
-              </p>
             </div>
-            <div class="message-body" v-else>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <article class="message is-success">
+              <div class="message-body" v-if="selectedCategory === ''">
+                <p v-if="0 < incrementalDifference">
+                  You've lost <strong>{{ incrementalDifference }}</strong> kilos.
+                </p>
+                <p v-else-if="absoluteValue === 0">
+                  Your weight have been stable since measuring.
+                </p>
+                <p v-else>
+                  You've gained <strong>{{ absoluteValue }}</strong> kilos.
+                </p>
+              </div>
+              <div class="message-body" v-else>
                 <p v-if="absoluteValue === 0">
                   Your weight was stable in {{ selectedCategory }}.
                 </p>
@@ -89,14 +88,16 @@
                 <p v-else>
                   You gained <strong>{{ absoluteValue }}</strong> kilos in {{ selectedCategory }}.
                 </p>
-            </div>
-          </article>
+              </div>
+            </article>
+          </div>
         </div>
-        <div class="white-space" v-else-if="hasError">
+
+        <div v-else-if="hasError">
           <article class="message is-danger">
             <div class="message-body">
               <p>
-               An error occured, please reload the page.
+                An error occured, please reload the page.
               </p>
             </div>
           </article>
@@ -254,9 +255,3 @@ export default {
   }
 }
 </script>
-
-<style>
-white-space {
-  margin : 30px ;
-}
-</style>
