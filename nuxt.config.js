@@ -32,15 +32,21 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.devtool = 'eval-source-map',
+    extend (config, { isDev }) {
+      if (isDev && process.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+    },
+    postcss: {
+      plugins: {
+        'postcss-custom-properties': {
+          warnings: false
+        }
       }
     }
   }
