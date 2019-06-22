@@ -3,6 +3,7 @@
 global.HTMLElement = typeof window === 'undefined' ? Object : window.HTMLElement
 
 module.exports = {
+  mode: 'spa',
   srcDir: 'src/',
   /*
   ** Headers of the page
